@@ -97,7 +97,7 @@
                 <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add To Cart</a>
                 <div class="product-wish">
                   @if($witem->contains($product->id))
-                    <a href="#" ><i class="fa fa-heart fill-heart"></i></a>
+                    <a href="#" wire:click.prevent="removeFromWishlist({{$product->id}})" ><i class="fa fa-heart fill-heart"></i></a>
                   @else
                    <a href="#"><i class="fa fa-heart" wire:click.prevent="addToWishlist({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"></i></a>
                   @endif
@@ -161,7 +161,7 @@
       <div class="widget mercado-widget filter-widget price-filter">
         <h2 class="widget-title">Price</h2>
         <div class="widget-content">
-          <div id="slider" wire:ignore height= '30px' ></div>
+          <div id="slider" wire:ignore style="height: 30px "></div>
 
           
         </div>

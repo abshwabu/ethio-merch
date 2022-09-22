@@ -4,6 +4,7 @@ use App\Http\Livewire\Admin\AdminCatagoryComponent;
 use App\Http\Livewire\Admin\AdminAddCatagoryComponent;
 use App\Http\Livewire\HomeCompnent;
 use App\Http\Livewire\ShopeComponent;
+use App\Http\Livewire\WishlistComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\DetailsComponent;
@@ -43,6 +44,7 @@ Route::get('/checkout',CheckoutComponent::class);
 Route::get('/product/{slug}',DetailsComponent::class)->name('product.details');
 Route::get('/product-catagory/{catagory_slug}',CatagoryComponent::class)->name('product.catagory');
 Route::get('/search',SearchComponent::class)->name('product.search');
+Route::get('/wishlist',WishlistComponent::class)->name('product.wishlist');
 // Route::middleware([
 //     'auth:sanctum',
 //     config('jetstream.auth_session'),
