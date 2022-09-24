@@ -186,7 +186,7 @@
 										<i class="fa fa-truck" aria-hidden="true"></i>
 										<div class="right-content">
 											<b class="title">Free Shipping</b>
-											<span class="subtitle">On Oder Over $99</span>
+											<span class="subtitle">On Oder In Addis Ababa</span>
 											<p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
 										</div>
 									</a>

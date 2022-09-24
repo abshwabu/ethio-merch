@@ -21,6 +21,7 @@ use App\Http\Livewire\Admin\AdminEditHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminHomeCatagoryComponent;
 use App\Http\Livewire\Admin\AdminSaleComponent;
 use App\Http\Livewire\SearchComponent;
+use App\Http\Livewire\ThankyouComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,11 +41,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',HomeCompnent::class);
 Route::get('/shop',ShopeComponent::class);
 Route::get('/cart',CartComponent::class)->name('product.cart');
-Route::get('/checkout',CheckoutComponent::class);
+Route::get('/checkout',CheckoutComponent::class)->name('checkout');
 Route::get('/product/{slug}',DetailsComponent::class)->name('product.details');
 Route::get('/product-catagory/{catagory_slug}',CatagoryComponent::class)->name('product.catagory');
 Route::get('/search',SearchComponent::class)->name('product.search');
 Route::get('/wishlist',WishlistComponent::class)->name('product.wishlist');
+Route::get('/thankyou-page',ThankyouComponent::class)->name('thankyou');
 // Route::middleware([
 //     'auth:sanctum',
 //     config('jetstream.auth_session'),

@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.1.0",
+        "cartalyst/stripe-laravel": "^14.0",
+        "chapa/chapa-laravel": "dev-main",
         "guzzlehttp/guzzle": "^7.2",
         "hardevine/shoppingcart": "^3.1",
         "inertiajs/inertia-laravel": "^0.6.3",

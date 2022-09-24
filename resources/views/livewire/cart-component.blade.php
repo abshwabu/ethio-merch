@@ -11,6 +11,7 @@
             </ul>
         </div>
         <div class=" main-content-area">
+        @if(Cart::instance('cart')->count() > 0)
 
             <div class="wrap-iten-in-cart">
                 @if(Session::has('success_message'))
@@ -18,7 +19,6 @@
                         <strong>Success</strong> {{Session::get('success_message')}}
                     </div>
                 @endif
-                @if(Cart::instance('cart')->count() > 0)
                 <h3 class="box-title">Products Name</h3>
                 <ul class="products-cart">
                     @foreach (Cart::instance('cart')->content() as $item)
@@ -47,11 +47,9 @@
                     </li> 
                     @endforeach                   										
                 </ul>
-                @else
-                    <p>No item in cart</p>
-                @endif
+               
             </div>
-
+            
             <div class="summary">
                 <div class="order-summary">
                     <h4 class="title-box">Order Summary</h4>
@@ -64,15 +62,21 @@
                     <label class="checkbox-field">
                         <input class="frm-input " name="have-code" id="have-code" value="" type="checkbox"><span>I have promo code</span>
                     </label>
-                    <a class="btn btn-checkout" href="checkout.html">Check out</a>
-                    <a class="link-to-shop" href="shop.html">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+                    <a class="btn btn-checkout" href="#" wire:click.prevent="checkout">Check out</a>
+                    <a class="link-to-shop" href="/shop">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="update-clear">
                     <a class="btn btn-clear" href="#" wire:click.prevent="destroyAll()">Clear Shopping Cart</a>
                     <a class="btn btn-update" href="#">Update Shopping Cart</a>
                 </div>
             </div>
-
+                 @else
+                    <div class="text-center" style="padding:30px 0;">
+                        <h1>Your cart is empty</h1>
+                        <p>Add some thing to cart</p>
+                        <a href="/shop" class="btn btn-success">Shop now</a>
+                    </div>
+                @endif
             <div class="wrap-show-advance-info-box style-1 box-in-site">
                 <h3 class="title-box">Most Viewed Products</h3>
                 <div class="wrap-products">
