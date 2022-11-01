@@ -18,6 +18,7 @@ use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminAddHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminEditHomeSliderComponent;
+use App\Http\Livewire\Admin\AdminEditTshirt;
 use App\Http\Livewire\Admin\AdminHomeCatagoryComponent;
 use App\Http\Livewire\Admin\AdminSaleComponent;
 use App\Http\Livewire\SearchComponent;
@@ -35,9 +36,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/welcom', function () {
+    return view('welcome');
+});
 Route::get('/',HomeCompnent::class);
 Route::get('/shop',ShopeComponent::class);
 Route::get('/cart',CartComponent::class)->name('product.cart');
@@ -75,5 +76,6 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/home-catagory',AdminHomeCatagoryComponent::class)->name('admin.homecatagory');
 
     Route::get('/admin/sale',AdminSaleComponent::class)->name('admin.sale');
+    Route::get('/admin/edit_tshirt',AdminEditTshirt::class)->name('admin.edit_t-shirt');
 
 });

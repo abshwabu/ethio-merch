@@ -5,7 +5,7 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.1.0",
+        "php": "^8.0.0",
         "cartalyst/stripe-laravel": "^14.0",
         "chapa/chapa-laravel": "dev-main",
         "guzzlehttp/guzzle": "^7.2",
@@ -62,6 +62,7 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
+        "platform-check": false,
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }

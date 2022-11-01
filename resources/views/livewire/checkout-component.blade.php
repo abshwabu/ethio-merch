@@ -163,7 +163,7 @@
 								<label class="payment-method">
 									<input name="payment-method" id="payment-method-visa" value="card" type="radio" wire:model="paymentmode">
 									<span>Card</span>
-									<span class="payment-desc">There are many variations of passages of Lorem Ipsum available</span>
+									@livewire(chapa-component)
 								</label>
 								<label class="payment-method">
 									<input name="payment-method" id="payment-method-paypal" value="telebirr" type="radio" wire:model="paymentmode">

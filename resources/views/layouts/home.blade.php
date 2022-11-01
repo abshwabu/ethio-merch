@@ -70,12 +70,13 @@
 											<li class="menu-item" >
 												<a title="Manage Home slider" href="{{route('admin.homecatagory')}}">Manage Home Categories</a>
 											</li>
-											<!-- <li class="menu-item" >
-												<a title="Manage sale" href="{{route('admin.sale')}}">Manage sale</a>
-											</li> -->
+											<li class="menu-item" >
+												<a title="creat t-shirt" href="{{route('admin.edit_t-shirt')}}">creat t-shirt</a>
+											</li>
 											<li class="menu-item">
 													<a href="{{route('logout')}}" onClick ="event.preventDefault(); document.getElementById('logout-form').submit();" >Logout</a>
 											    </li>
+												
 											<form id="logout-form" action="{{  route('logout') }}" method="POST">
 												@csrf
 												
@@ -443,6 +444,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js" integrity="sha512-1mDhG//LAjM3pLXCJyaA+4c+h5qmMoTc7IuJyuNNPaakrWT9rVTxICK4tIizf7YwJsXgDC2JP74PGCc7qxLAHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/451/fabric.min.js" integrity="sha512-qeu8RcLnpzoRnEotT3r1CxB17JtHrBqlfSTOm4MQzb7efBdkcL03t343gyRmI6OTUW6iI+hShiysszISQ/IahA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	@livewireScripts
 	@stack('scripts')
